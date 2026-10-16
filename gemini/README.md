@@ -2,12 +2,13 @@
 
 Lessons structured according to the [Backend / Software Developer Knowledge Checklist](../checklist.md).
 
-For each topic, five foundational engineering questions are answered:
-1. **What is it?**
-2. **Why do we need it?**
-3. **How to apply / implement / use it?**
-4. **When should I NOT use this? (Trade-offs and anti-patterns)**
-5. **How do I know I understand it?**
+For each topic, foundational engineering questions are answered:
+1. **What is it?** (Plain sentence + real-world mental model)
+2. **Why do we need it?** (Specific pains, bugs, or bottlenecks without it)
+3. **Under the hood / The Mechanism / System Flow** (One layer deeper: data structures, lifecycle, runtime costs)
+4. **How to apply / implement / use it?** (Minimal working example covering happy and unhappy paths)
+5. **When should I NOT use this?** (Trade-offs, hidden costs, and anti-patterns)
+6. **How do I know I understand it?** (Blank-page test and constraint change predictions)
 
 ---
 
@@ -25,7 +26,19 @@ For each topic, five foundational engineering questions are answered:
 | 6 | [Business Validation](basic/api_application/6.business_validation.md) | Domain invariants, rich domain entities, state-dependent checks, and race condition prevention | Done |
 | 7 | [Error Handling](basic/api_application/7.error_handling.md) | Operational vs programmer errors, RFC 9457 problem details, centralized boundaries, and request tracing | Done |
 | 8 | [HTTP Status Codes](basic/api_application/8.http_status_codes.md) | Semantic status classes (2xx, 3xx, 4xx, 5xx), headers, caching interactions, and decision matrices | Done |
-| 9 | `Search / Filter / Sort` | *(Upcoming)* | Pending |
-| 10 | `Pagination` | *(Upcoming)* | Pending |
-| 11 | `API Versioning` | *(Upcoming)* | Pending |
-| 12 | `Idempotency Basics` | *(Upcoming)* | Pending |
+| 9 | [Search / Filter / Sort](basic/api_application/9.search_filter_sort.md) | Query params, allowlists, dynamic WHERE/ORDER BY, indexing strategies, and full-text vs. B-Tree | Done |
+| 10 | [Pagination](basic/api_application/10.pagination.md) | Offset vs. Cursor/Keyset vs. Time-based pagination, page drift, deep offset pitfalls, and Link headers | Done |
+| 11 | [API Versioning](basic/api_application/11.api_versioning.md) | URI vs. Header vs. Query vs. Content Negotiation, breaking changes, adapter layers, and deprecation headers | Done |
+| 12 | [Idempotency Basics](basic/api_application/12.idempotency_basics.md) | RFC 9110 method semantics, Idempotency-Key pattern, distributed locking, payload hashing, and retry safety | Done |
+
+### Authentication & Authorization
+
+| Item | Topic | Description | Status |
+| :--- | :--- | :--- | :--- |
+| 1 | [Authentication](basic/authentication_authorization/1.authentication.md) | Identity verification, perimeter pipelines, stateful vs stateless mechanisms, and context propagation | Done |
+| 2 | [Authorization](basic/authentication_authorization/2.authorization.md) | Coarse vs. fine-grained access control, BOLA/IDOR prevention, policy decision tuples, and RBAC/ABAC/ReBAC | Done |
+| 3 | [User Management](basic/authentication_authorization/3.user_management.md) | Identity lifecycle state machines, canonical normalization, token_version revocation, and GDPR anonymization | Done |
+| 4 | [Role-Based Access Control (RBAC)](basic/authentication_authorization/4.role_based_access_control.md) | NIST 5-table schema, permission checking vs role checking, permission resolution, and avoiding role explosion | Done |
+| 5 | `Session / Token` | *(Upcoming)* | Pending |
+| 6 | `JWT Basics` | *(Upcoming)* | Pending |
+| 7 | `Password / Credential Security` | *(Upcoming)* | Pending |
