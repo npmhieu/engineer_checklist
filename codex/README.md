@@ -17,268 +17,268 @@ Basic API & Application lessons 4–12, all current lessons in the other Basic /
 
 Read these lessons in order:
 
-1. [HTTP Fundamentals](basic/api_application/1.http_fundamentals.md) — the communication protocol.
-2. [API / Request-Response](basic/api_application/2.api_request_response.md) — the application contract and processing flow.
-3. [REST API](basic/api_application/3.rest_api.md) — an architectural style and resource-oriented API design.
-4. [CRUD Resource](basic/api_application/4.crud_resource.md) — managing resource lifecycles and choosing where CRUD fits.
-5. [Request Validation](basic/api_application/5.request_validation.md) — checking incoming data against the API contract.
-6. [Business Validation](basic/api_application/6.business_validation.md) — enforcing application invariants, including concurrent writes.
-7. [Error Handling](basic/api_application/7.error_handling.md) — preserving state and reporting failures safely.
-8. [HTTP Status Codes](basic/api_application/8.http_status_codes.md) — selecting response outcomes, headers, and content.
-9. [Search / Filter / Sort](basic/api_application/9.search_filter_sort.md) — finding authorized records and returning deterministic results.
-10. [Pagination](basic/api_application/10.pagination.md) — bounding responses and continuing through ordered data.
-11. [API Versioning](basic/api_application/11.api_versioning.md) — evolving contracts while supported clients coexist.
-12. [Idempotency Basics](basic/api_application/12.idempotency_basics.md) — handling repeated intent without duplicate committed effects.
+1. [HTTP Fundamentals](basic/1.api_application/1.http_fundamentals.md) — the communication protocol.
+2. [API / Request-Response](basic/1.api_application/2.api_request_response.md) — the application contract and processing flow.
+3. [REST API](basic/1.api_application/3.rest_api.md) — an architectural style and resource-oriented API design.
+4. [CRUD Resource](basic/1.api_application/4.crud_resource.md) — managing resource lifecycles and choosing where CRUD fits.
+5. [Request Validation](basic/1.api_application/5.request_validation.md) — checking incoming data against the API contract.
+6. [Business Validation](basic/1.api_application/6.business_validation.md) — enforcing application invariants, including concurrent writes.
+7. [Error Handling](basic/1.api_application/7.error_handling.md) — preserving state and reporting failures safely.
+8. [HTTP Status Codes](basic/1.api_application/8.http_status_codes.md) — selecting response outcomes, headers, and content.
+9. [Search / Filter / Sort](basic/1.api_application/9.search_filter_sort.md) — finding authorized records and returning deterministic results.
+10. [Pagination](basic/1.api_application/10.pagination.md) — bounding responses and continuing through ordered data.
+11. [API Versioning](basic/1.api_application/11.api_versioning.md) — evolving contracts while supported clients coexist.
+12. [Idempotency Basics](basic/1.api_application/12.idempotency_basics.md) — handling repeated intent without duplicate committed effects.
 
 ## Basic / Fundamental → Authentication & Authorization
 
-1. [Authentication](basic/authentication_authorization/1.authentication.md) — verifying identity evidence and creating trusted caller context.
-2. [Authorization](basic/authentication_authorization/2.authorization.md) — enforcing action, resource, ownership, and tenant boundaries.
-3. [User Management](basic/authentication_authorization/3.user_management.md) — coordinating account lifecycle, proofs, suspension, and access state.
-4. [Role-Based Access Control (RBAC)](basic/authentication_authorization/4.role_based_access_control.md) — grouping permissions into scoped roles with additional resource checks.
-5. [Session / Token](basic/authentication_authorization/5.session_token.md) — maintaining authenticated continuity, expiry, rotation, and revocation.
-6. [JWT Basics](basic/authentication_authorization/6.jwt_basics.md) — verifying structured claims against fixed cryptographic and application policy.
-7. [Password / Credential Security](basic/authentication_authorization/7.password_credential_security.md) — protecting password verifiers, machine secrets, recovery, and credential lifecycle.
+1. [Authentication](basic/2.authentication_authorization/1.authentication.md) — verifying identity evidence and creating trusted caller context.
+2. [Authorization](basic/2.authentication_authorization/2.authorization.md) — enforcing action, resource, ownership, and tenant boundaries.
+3. [User Management](basic/2.authentication_authorization/3.user_management.md) — coordinating account lifecycle, proofs, suspension, and access state.
+4. [Role-Based Access Control (RBAC)](basic/2.authentication_authorization/4.role_based_access_control.md) — grouping permissions into scoped roles with additional resource checks.
+5. [Session / Token](basic/2.authentication_authorization/5.session_token.md) — maintaining authenticated continuity, expiry, rotation, and revocation.
+6. [JWT Basics](basic/2.authentication_authorization/6.jwt_basics.md) — verifying structured claims against fixed cryptographic and application policy.
+7. [Password / Credential Security](basic/2.authentication_authorization/7.password_credential_security.md) — protecting password verifiers, machine secrets, recovery, and credential lifecycle.
 
 ## Basic / Fundamental → Database
 
-1. [Database Fundamentals](basic/database/1.database_fundamentals.md) — query execution, persistence, coordination, and recovery.
-2. [Schema / Data Modeling](basic/database/2.schema_data_modeling.md) — entities, units, identity, and storage invariants.
-3. [Relationships](basic/database/3.relationships.md) — cardinality, optionality, associations, and joins.
-4. [Normalization](basic/database/4.normalization.md) — fact ownership, dependencies, and update anomalies.
-5. [Primary / Foreign Key](basic/database/5.primary_foreign_key.md) — identity and reference integrity, including tenant scope.
-6. [Indexes](basic/database/6.indexes.md) — access paths and their read/write trade-offs.
-7. [Basic Query Optimization](basic/database/7.basic_query_optimization.md) — query count, plans, result semantics, and measured work.
-8. [Transactions](basic/database/8.transactions.md) — local atomicity, concurrency boundaries, and uncertain outcomes.
-9. [Migration Basics](basic/database/9.migration_basics.md) — tracked schema/data transitions and deployment compatibility.
+1. [Database Fundamentals](basic/3.database/1.database_fundamentals.md) — query execution, persistence, coordination, and recovery.
+2. [Schema / Data Modeling](basic/3.database/2.schema_data_modeling.md) — entities, units, identity, and storage invariants.
+3. [Relationships](basic/3.database/3.relationships.md) — cardinality, optionality, associations, and joins.
+4. [Normalization](basic/3.database/4.normalization.md) — fact ownership, dependencies, and update anomalies.
+5. [Primary / Foreign Key](basic/3.database/5.primary_foreign_key.md) — identity and reference integrity, including tenant scope.
+6. [Indexes](basic/3.database/6.indexes.md) — access paths and their read/write trade-offs.
+7. [Basic Query Optimization](basic/3.database/7.basic_query_optimization.md) — query count, plans, result semantics, and measured work.
+8. [Transactions](basic/3.database/8.transactions.md) — local atomicity, concurrency boundaries, and uncertain outcomes.
+9. [Migration Basics](basic/3.database/9.migration_basics.md) — tracked schema/data transitions and deployment compatibility.
 
 ## Basic / Fundamental → Common Features
 
-1. [File Upload](basic/common_features/1.file_upload.md) — bounded intake, content policy, and safe publication.
-2. [File Storage](basic/common_features/2.file_storage.md) — object identity, ownership, integrity, and recovery.
-3. [Notifications](basic/common_features/3.notifications.md) — recoverable delivery intent and bounded retries.
-4. [Export / Import](basic/common_features/4.export_import.md) — portable contracts, validation, and batch atomicity.
-5. [Audit Log](basic/common_features/5.audit_log.md) — attributable evidence coordinated with committed changes.
-6. [Reporting / Analytics](basic/common_features/6.reporting_analytics.md) — metric definitions, fact grain, and time-window correctness.
+1. [File Upload](basic/4.common_features/1.file_upload.md) — bounded intake, content policy, and safe publication.
+2. [File Storage](basic/4.common_features/2.file_storage.md) — object identity, ownership, integrity, and recovery.
+3. [Notifications](basic/4.common_features/3.notifications.md) — recoverable delivery intent and bounded retries.
+4. [Export / Import](basic/4.common_features/4.export_import.md) — portable contracts, validation, and batch atomicity.
+5. [Audit Log](basic/4.common_features/5.audit_log.md) — attributable evidence coordinated with committed changes.
+6. [Reporting / Analytics](basic/4.common_features/6.reporting_analytics.md) — metric definitions, fact grain, and time-window correctness.
 
 ## Basic / Fundamental → Architecture & Code Organization
 
-1. [Monolithic Architecture](basic/architecture_code_organization/1.monolithic_architecture.md) — deployment unity with internal module boundaries.
-2. [Layered Architecture](basic/architecture_code_organization/2.layered_architecture.md) — transport, use-case, and persistence responsibilities.
-3. [Separation of Concerns](basic/architecture_code_organization/3.separation_of_concerns.md) — cohesive policy and explicit effects.
-4. [Package / Folder Organization](basic/architecture_code_organization/4.package_folder_organization.md) — import-safe modules and clear entry points.
-5. [Dependency Direction](basic/architecture_code_organization/5.dependency_direction.md) — core ports, outer adapters, and composition.
-6. [API / Worker / Cron Separation](basic/architecture_code_organization/6.api_worker_cron_separation.md) — shared rules behind distinct triggers and workloads.
+1. [Monolithic Architecture](basic/5.architecture_code_organization/1.monolithic_architecture.md) — deployment unity with internal module boundaries.
+2. [Layered Architecture](basic/5.architecture_code_organization/2.layered_architecture.md) — transport, use-case, and persistence responsibilities.
+3. [Separation of Concerns](basic/5.architecture_code_organization/3.separation_of_concerns.md) — cohesive policy and explicit effects.
+4. [Package / Folder Organization](basic/5.architecture_code_organization/4.package_folder_organization.md) — import-safe modules and clear entry points.
+5. [Dependency Direction](basic/5.architecture_code_organization/5.dependency_direction.md) — core ports, outer adapters, and composition.
+6. [API / Worker / Cron Separation](basic/5.architecture_code_organization/6.api_worker_cron_separation.md) — shared rules behind distinct triggers and workloads.
 
 ## Basic / Fundamental → Testing
 
-1. [Unit Test](basic/testing/1.unit_test.md) — isolated behavior, boundaries, and deterministic assertions.
-2. [Integration Test](basic/testing/2.integration_test.md) — real component boundaries, fixtures, and persisted outcomes.
+1. [Unit Test](basic/6.testing/1.unit_test.md) — isolated behavior, boundaries, and deterministic assertions.
+2. [Integration Test](basic/6.testing/2.integration_test.md) — real component boundaries, fixtures, and persisted outcomes.
 
 ## Basic / Fundamental → Development & Operations
 
-1. [Git](basic/development_operations/1.git.md) — snapshots, staging, history, and safe collaboration concepts.
-2. [Environment / Configuration](basic/development_operations/2.environment_configuration.md) — typed startup settings and safe deployment boundaries.
-3. [Logging](basic/development_operations/3.logging.md) — bounded, correlated, redacted operational events.
-4. [Health Check](basic/development_operations/4.health_check.md) — distinct startup, readiness, and liveness actions.
-5. [Basic Monitoring](basic/development_operations/5.basic_monitoring.md) — bounded signals, distributions, and actionable alerts.
-6. [Basic CI/CD](basic/development_operations/6.basic_ci_cd.md) — required checks, artifact identity, and controlled promotion.
+1. [Git](basic/7.development_operations/1.git.md) — snapshots, staging, history, and safe collaboration concepts.
+2. [Environment / Configuration](basic/7.development_operations/2.environment_configuration.md) — typed startup settings and safe deployment boundaries.
+3. [Logging](basic/7.development_operations/3.logging.md) — bounded, correlated, redacted operational events.
+4. [Health Check](basic/7.development_operations/4.health_check.md) — distinct startup, readiness, and liveness actions.
+5. [Basic Monitoring](basic/7.development_operations/5.basic_monitoring.md) — bounded signals, distributions, and actionable alerts.
+6. [Basic CI/CD](basic/7.development_operations/6.basic_ci_cd.md) — required checks, artifact identity, and controlled promotion.
 
 ## Intermediate → API & Application
 
-1. [Advanced API Design](intermediate/api_application/1.advanced_api_design.md) — concurrent edits, preconditions, bounded interfaces, and operation lifecycles.
-2. [Backward Compatibility](intermediate/api_application/2.backward_compatibility.md) — preserving supported consumer behavior through mixed-version transitions.
-3. [API Contract](intermediate/api_application/3.api_contract.md) — one described interface, schema checks, and executable provider expectations.
-4. [Advanced Idempotency](intermediate/api_application/4.advanced_idempotency.md) — crash recovery, leases/fences, stable downstream identities, and uncertain effects.
-5. [Rate Limiting](intermediate/api_application/5.rate_limiting.md) — atomic scoped admission, burst/refill behavior, and capacity trade-offs.
-6. [Webhook](intermediate/api_application/6.webhook.md) — authenticated raw-body intake, durable inbox acceptance, and duplicate handling.
-7. [Third-party API Integration](intermediate/api_application/7.third_party_api_integration.md) — bounded retries/deadlines, response validation, and provider failure mapping.
-8. [Service-to-Service Communication](intermediate/api_application/8.service_to_service_communication.md) — workload identity, user delegation, resource scope, and propagated budgets.
+1. [Advanced API Design](intermediate/1.api_application/1.advanced_api_design.md) — concurrent edits, preconditions, bounded interfaces, and operation lifecycles.
+2. [Backward Compatibility](intermediate/1.api_application/2.backward_compatibility.md) — preserving supported consumer behavior through mixed-version transitions.
+3. [API Contract](intermediate/1.api_application/3.api_contract.md) — one described interface, schema checks, and executable provider expectations.
+4. [Advanced Idempotency](intermediate/1.api_application/4.advanced_idempotency.md) — crash recovery, leases/fences, stable downstream identities, and uncertain effects.
+5. [Rate Limiting](intermediate/1.api_application/5.rate_limiting.md) — atomic scoped admission, burst/refill behavior, and capacity trade-offs.
+6. [Webhook](intermediate/1.api_application/6.webhook.md) — authenticated raw-body intake, durable inbox acceptance, and duplicate handling.
+7. [Third-party API Integration](intermediate/1.api_application/7.third_party_api_integration.md) — bounded retries/deadlines, response validation, and provider failure mapping.
+8. [Service-to-Service Communication](intermediate/1.api_application/8.service_to_service_communication.md) — workload identity, user delegation, resource scope, and propagated budgets.
 
 ## Intermediate → Database & Performance
 
-1. [Advanced Transactions](intermediate/database_performance/1.advanced_transactions.md)
-2. [Concurrency](intermediate/database_performance/2.concurrency.md)
-3. [Race Conditions](intermediate/database_performance/3.race_conditions.md)
-4. [Optimistic Locking](intermediate/database_performance/4.optimistic_locking.md)
-5. [Pessimistic Locking](intermediate/database_performance/5.pessimistic_locking.md)
-6. [Query Optimization](intermediate/database_performance/6.query_optimization.md)
-7. [Database Migration in Production](intermediate/database_performance/7.database_migration_in_production.md)
-8. [Caching](intermediate/database_performance/8.caching.md)
-9. [Redis](intermediate/database_performance/9.redis.md)
-10. [Connection Pooling](intermediate/database_performance/10.connection_pooling.md)
+1. [Advanced Transactions](intermediate/2.database_performance/1.advanced_transactions.md)
+2. [Concurrency](intermediate/2.database_performance/2.concurrency.md)
+3. [Race Conditions](intermediate/2.database_performance/3.race_conditions.md)
+4. [Optimistic Locking](intermediate/2.database_performance/4.optimistic_locking.md)
+5. [Pessimistic Locking](intermediate/2.database_performance/5.pessimistic_locking.md)
+6. [Query Optimization](intermediate/2.database_performance/6.query_optimization.md)
+7. [Database Migration in Production](intermediate/2.database_performance/7.database_migration_in_production.md)
+8. [Caching](intermediate/2.database_performance/8.caching.md)
+9. [Redis](intermediate/2.database_performance/9.redis.md)
+10. [Connection Pooling](intermediate/2.database_performance/10.connection_pooling.md)
 
 ## Intermediate → Async / Background Processing
 
-1. [Background Task](intermediate/async_background_processing/1.background_task.md)
-2. [Job](intermediate/async_background_processing/2.job.md)
-3. [Message](intermediate/async_background_processing/3.message.md)
-4. [Producer](intermediate/async_background_processing/4.producer.md)
-5. [Message Queue](intermediate/async_background_processing/5.message_queue.md)
-6. [Consumer](intermediate/async_background_processing/6.consumer.md)
-7. [Worker](intermediate/async_background_processing/7.worker.md)
-8. [Cronjob](intermediate/async_background_processing/8.cronjob.md)
-9. [Event](intermediate/async_background_processing/9.event.md)
-10. [Event-Driven Architecture](intermediate/async_background_processing/10.event_driven_architecture.md)
-11. [Queue vs Topic](intermediate/async_background_processing/11.queue_vs_topic.md)
-12. [Job Status / Lifecycle](intermediate/async_background_processing/12.job_status_lifecycle.md)
-13. [Retry](intermediate/async_background_processing/13.retry.md)
-14. [Exponential Backoff](intermediate/async_background_processing/14.exponential_backoff.md)
-15. [Timeout](intermediate/async_background_processing/15.timeout.md)
-16. [Dead Letter Queue (DLQ)](intermediate/async_background_processing/16.dead_letter_queue.md)
-17. [Duplicate Processing](intermediate/async_background_processing/17.duplicate_processing.md)
-18. [Idempotent Consumer](intermediate/async_background_processing/18.idempotent_consumer.md)
+1. [Background Task](intermediate/3.async_background_processing/1.background_task.md)
+2. [Job](intermediate/3.async_background_processing/2.job.md)
+3. [Message](intermediate/3.async_background_processing/3.message.md)
+4. [Producer](intermediate/3.async_background_processing/4.producer.md)
+5. [Message Queue](intermediate/3.async_background_processing/5.message_queue.md)
+6. [Consumer](intermediate/3.async_background_processing/6.consumer.md)
+7. [Worker](intermediate/3.async_background_processing/7.worker.md)
+8. [Cronjob](intermediate/3.async_background_processing/8.cronjob.md)
+9. [Event](intermediate/3.async_background_processing/9.event.md)
+10. [Event-Driven Architecture](intermediate/3.async_background_processing/10.event_driven_architecture.md)
+11. [Queue vs Topic](intermediate/3.async_background_processing/11.queue_vs_topic.md)
+12. [Job Status / Lifecycle](intermediate/3.async_background_processing/12.job_status_lifecycle.md)
+13. [Retry](intermediate/3.async_background_processing/13.retry.md)
+14. [Exponential Backoff](intermediate/3.async_background_processing/14.exponential_backoff.md)
+15. [Timeout](intermediate/3.async_background_processing/15.timeout.md)
+16. [Dead Letter Queue (DLQ)](intermediate/3.async_background_processing/16.dead_letter_queue.md)
+17. [Duplicate Processing](intermediate/3.async_background_processing/17.duplicate_processing.md)
+18. [Idempotent Consumer](intermediate/3.async_background_processing/18.idempotent_consumer.md)
 
 ## Intermediate → Application Features
 
-1. [Async Export / Import](intermediate/application_features/1.async_export_import.md)
-2. [Notification Architecture](intermediate/application_features/2.notification_architecture.md)
-3. [Audit / Activity History](intermediate/application_features/3.audit_activity_history.md)
-4. [Reporting Architecture](intermediate/application_features/4.reporting_architecture.md)
-5. [Batch Processing](intermediate/application_features/5.batch_processing.md)
+1. [Async Export / Import](intermediate/4.application_features/1.async_export_import.md)
+2. [Notification Architecture](intermediate/4.application_features/2.notification_architecture.md)
+3. [Audit / Activity History](intermediate/4.application_features/3.audit_activity_history.md)
+4. [Reporting Architecture](intermediate/4.application_features/4.reporting_architecture.md)
+5. [Batch Processing](intermediate/4.application_features/5.batch_processing.md)
 
 ## Intermediate → Architecture
 
-1. [Feature / Domain-oriented Architecture](intermediate/architecture/1.feature_domain_oriented_architecture.md)
-2. [Modular Monolith](intermediate/architecture/2.modular_monolith.md)
-3. [DDD Basics](intermediate/architecture/3.ddd_basics.md)
-4. [Bounded Context](intermediate/architecture/4.bounded_context.md)
-5. [Domain Service](intermediate/architecture/5.domain_service.md)
-6. [Application Service](intermediate/architecture/6.application_service.md)
-7. [Infrastructure Layer](intermediate/architecture/7.infrastructure_layer.md)
-8. [Hybrid Architecture](intermediate/architecture/8.hybrid_architecture.md)
-9. [Shared Platform / Infrastructure](intermediate/architecture/9.shared_platform_infrastructure.md)
+1. [Feature / Domain-oriented Architecture](intermediate/5.architecture/1.feature_domain_oriented_architecture.md)
+2. [Modular Monolith](intermediate/5.architecture/2.modular_monolith.md)
+3. [DDD Basics](intermediate/5.architecture/3.ddd_basics.md)
+4. [Bounded Context](intermediate/5.architecture/4.bounded_context.md)
+5. [Domain Service](intermediate/5.architecture/5.domain_service.md)
+6. [Application Service](intermediate/5.architecture/6.application_service.md)
+7. [Infrastructure Layer](intermediate/5.architecture/7.infrastructure_layer.md)
+8. [Hybrid Architecture](intermediate/5.architecture/8.hybrid_architecture.md)
+9. [Shared Platform / Infrastructure](intermediate/5.architecture/9.shared_platform_infrastructure.md)
 
 ## Intermediate → Testing
 
-1. [End-to-End (E2E) Test](intermediate/testing/1.end_to_end_test.md)
-2. [Contract Test](intermediate/testing/2.contract_test.md)
-3. [Regression Test](intermediate/testing/3.regression_test.md)
-4. [Smoke Test](intermediate/testing/4.smoke_test.md)
-5. [Load Test](intermediate/testing/5.load_test.md)
-6. [Basic Performance Test](intermediate/testing/6.basic_performance_test.md)
+1. [End-to-End (E2E) Test](intermediate/6.testing/1.end_to_end_test.md)
+2. [Contract Test](intermediate/6.testing/2.contract_test.md)
+3. [Regression Test](intermediate/6.testing/3.regression_test.md)
+4. [Smoke Test](intermediate/6.testing/4.smoke_test.md)
+5. [Load Test](intermediate/6.testing/5.load_test.md)
+6. [Basic Performance Test](intermediate/6.testing/6.basic_performance_test.md)
 
 ## Intermediate → Observability
 
-1. [Structured Logging](intermediate/observability/1.structured_logging.md)
-2. [Metrics](intermediate/observability/2.metrics.md)
-3. [Error Tracking](intermediate/observability/3.error_tracking.md)
-4. [Monitoring](intermediate/observability/4.monitoring.md)
-5. [Alerting](intermediate/observability/5.alerting.md)
-6. [Request ID](intermediate/observability/6.request_id.md)
-7. [Correlation ID](intermediate/observability/7.correlation_id.md)
-8. [Distributed Tracing](intermediate/observability/8.distributed_tracing.md)
+1. [Structured Logging](intermediate/7.observability/1.structured_logging.md)
+2. [Metrics](intermediate/7.observability/2.metrics.md)
+3. [Error Tracking](intermediate/7.observability/3.error_tracking.md)
+4. [Monitoring](intermediate/7.observability/4.monitoring.md)
+5. [Alerting](intermediate/7.observability/5.alerting.md)
+6. [Request ID](intermediate/7.observability/6.request_id.md)
+7. [Correlation ID](intermediate/7.observability/7.correlation_id.md)
+8. [Distributed Tracing](intermediate/7.observability/8.distributed_tracing.md)
 
 ## Intermediate → Deployment
 
-1. [Docker / Containers](intermediate/deployment/1.docker_containers.md)
-2. [CI/CD Pipeline](intermediate/deployment/2.ci_cd_pipeline.md)
-3. [Production Deployment](intermediate/deployment/3.production_deployment.md)
-4. [Database Migration Strategy](intermediate/deployment/4.database_migration_strategy.md)
-5. [Rollback](intermediate/deployment/5.rollback.md)
-6. [Feature Flags](intermediate/deployment/6.feature_flags.md)
+1. [Docker / Containers](intermediate/8.deployment/1.docker_containers.md)
+2. [CI/CD Pipeline](intermediate/8.deployment/2.ci_cd_pipeline.md)
+3. [Production Deployment](intermediate/8.deployment/3.production_deployment.md)
+4. [Database Migration Strategy](intermediate/8.deployment/4.database_migration_strategy.md)
+5. [Rollback](intermediate/8.deployment/5.rollback.md)
+6. [Feature Flags](intermediate/8.deployment/6.feature_flags.md)
 
 ## Advanced → Distributed Systems
 
-1. [Distributed Systems Fundamentals](advanced/distributed_systems/1.distributed_systems_fundamentals.md)
-2. [Service Boundaries](advanced/distributed_systems/2.service_boundaries.md)
-3. [Microservices Architecture](advanced/distributed_systems/3.microservices_architecture.md)
-4. [Inter-service Communication](advanced/distributed_systems/4.inter_service_communication.md)
-5. [Event-Driven Architecture at Scale](advanced/distributed_systems/5.event_driven_architecture_at_scale.md)
-6. [Event Schema / Versioning](advanced/distributed_systems/6.event_schema_versioning.md)
-7. [Event Ordering](advanced/distributed_systems/7.event_ordering.md)
-8. [Event Replay](advanced/distributed_systems/8.event_replay.md)
-9. [Fan-out](advanced/distributed_systems/9.fan_out.md)
-10. [Consumer Groups](advanced/distributed_systems/10.consumer_groups.md)
+1. [Distributed Systems Fundamentals](advanced/1.distributed_systems/1.distributed_systems_fundamentals.md)
+2. [Service Boundaries](advanced/1.distributed_systems/2.service_boundaries.md)
+3. [Microservices Architecture](advanced/1.distributed_systems/3.microservices_architecture.md)
+4. [Inter-service Communication](advanced/1.distributed_systems/4.inter_service_communication.md)
+5. [Event-Driven Architecture at Scale](advanced/1.distributed_systems/5.event_driven_architecture_at_scale.md)
+6. [Event Schema / Versioning](advanced/1.distributed_systems/6.event_schema_versioning.md)
+7. [Event Ordering](advanced/1.distributed_systems/7.event_ordering.md)
+8. [Event Replay](advanced/1.distributed_systems/8.event_replay.md)
+9. [Fan-out](advanced/1.distributed_systems/9.fan_out.md)
+10. [Consumer Groups](advanced/1.distributed_systems/10.consumer_groups.md)
 
 ## Advanced → Messaging
 
-1. [Message Delivery Semantics](advanced/messaging/1.message_delivery_semantics.md)
-2. [At-most-once Delivery](advanced/messaging/2.at_most_once_delivery.md)
-3. [At-least-once Delivery](advanced/messaging/3.at_least_once_delivery.md)
-4. [Effectively-once Processing](advanced/messaging/4.effectively_once_processing.md)
-5. [Exactly-once Concepts](advanced/messaging/5.exactly_once_concepts.md)
-6. [Message Ordering](advanced/messaging/6.message_ordering.md)
-7. [Poison Messages](advanced/messaging/7.poison_messages.md)
-8. [Advanced Retry Strategies](advanced/messaging/8.advanced_retry_strategies.md)
-9. [Dead Letter Queue Strategy](advanced/messaging/9.dead_letter_queue_strategy.md)
-10. [Queue Backpressure](advanced/messaging/10.queue_backpressure.md)
+1. [Message Delivery Semantics](advanced/2.messaging/1.message_delivery_semantics.md)
+2. [At-most-once Delivery](advanced/2.messaging/2.at_most_once_delivery.md)
+3. [At-least-once Delivery](advanced/2.messaging/3.at_least_once_delivery.md)
+4. [Effectively-once Processing](advanced/2.messaging/4.effectively_once_processing.md)
+5. [Exactly-once Concepts](advanced/2.messaging/5.exactly_once_concepts.md)
+6. [Message Ordering](advanced/2.messaging/6.message_ordering.md)
+7. [Poison Messages](advanced/2.messaging/7.poison_messages.md)
+8. [Advanced Retry Strategies](advanced/2.messaging/8.advanced_retry_strategies.md)
+9. [Dead Letter Queue Strategy](advanced/2.messaging/9.dead_letter_queue_strategy.md)
+10. [Queue Backpressure](advanced/2.messaging/10.queue_backpressure.md)
 
 ## Advanced → Distributed Consistency
 
-1. [Eventual Consistency](advanced/distributed_consistency/1.eventual_consistency.md)
-2. [Strong Consistency](advanced/distributed_consistency/2.strong_consistency.md)
-3. [CAP Theorem](advanced/distributed_consistency/3.cap_theorem.md)
-4. [Distributed Transactions](advanced/distributed_consistency/4.distributed_transactions.md)
-5. [Saga Pattern](advanced/distributed_consistency/5.saga_pattern.md)
-6. [Compensation](advanced/distributed_consistency/6.compensation.md)
-7. [Distributed Locking](advanced/distributed_consistency/7.distributed_locking.md)
-8. [Distributed Idempotency](advanced/distributed_consistency/8.distributed_idempotency.md)
+1. [Eventual Consistency](advanced/3.distributed_consistency/1.eventual_consistency.md)
+2. [Strong Consistency](advanced/3.distributed_consistency/2.strong_consistency.md)
+3. [CAP Theorem](advanced/3.distributed_consistency/3.cap_theorem.md)
+4. [Distributed Transactions](advanced/3.distributed_consistency/4.distributed_transactions.md)
+5. [Saga Pattern](advanced/3.distributed_consistency/5.saga_pattern.md)
+6. [Compensation](advanced/3.distributed_consistency/6.compensation.md)
+7. [Distributed Locking](advanced/3.distributed_consistency/7.distributed_locking.md)
+8. [Distributed Idempotency](advanced/3.distributed_consistency/8.distributed_idempotency.md)
 
 ## Advanced → Database / Scaling
 
-1. [Replication](advanced/database_scaling/1.replication.md)
-2. [Read Replicas](advanced/database_scaling/2.read_replicas.md)
-3. [Database Failover](advanced/database_scaling/3.database_failover.md)
-4. [Partitioning](advanced/database_scaling/4.partitioning.md)
-5. [Sharding](advanced/database_scaling/5.sharding.md)
-6. [Consistency Models](advanced/database_scaling/6.consistency_models.md)
-7. [Large-scale Data Architecture](advanced/database_scaling/7.large_scale_data_architecture.md)
+1. [Replication](advanced/4.database_scaling/1.replication.md)
+2. [Read Replicas](advanced/4.database_scaling/2.read_replicas.md)
+3. [Database Failover](advanced/4.database_scaling/3.database_failover.md)
+4. [Partitioning](advanced/4.database_scaling/4.partitioning.md)
+5. [Sharding](advanced/4.database_scaling/5.sharding.md)
+6. [Consistency Models](advanced/4.database_scaling/6.consistency_models.md)
+7. [Large-scale Data Architecture](advanced/4.database_scaling/7.large_scale_data_architecture.md)
 
 ## Advanced → Reliability
 
-1. [Circuit Breaker](advanced/reliability/1.circuit_breaker.md)
-2. [Bulkhead](advanced/reliability/2.bulkhead.md)
-3. [Graceful Degradation](advanced/reliability/3.graceful_degradation.md)
-4. [Fault Tolerance](advanced/reliability/4.fault_tolerance.md)
-5. [High Availability](advanced/reliability/5.high_availability.md)
-6. [Failover](advanced/reliability/6.failover.md)
-7. [Disaster Recovery](advanced/reliability/7.disaster_recovery.md)
-8. [Backup / Restore](advanced/reliability/8.backup_restore.md)
-9. [Recovery Point Objective (RPO)](advanced/reliability/9.recovery_point_objective.md)
-10. [Recovery Time Objective (RTO)](advanced/reliability/10.recovery_time_objective.md)
-11. [Multi-Region Architecture](advanced/reliability/11.multi_region_architecture.md)
+1. [Circuit Breaker](advanced/5.reliability/1.circuit_breaker.md)
+2. [Bulkhead](advanced/5.reliability/2.bulkhead.md)
+3. [Graceful Degradation](advanced/5.reliability/3.graceful_degradation.md)
+4. [Fault Tolerance](advanced/5.reliability/4.fault_tolerance.md)
+5. [High Availability](advanced/5.reliability/5.high_availability.md)
+6. [Failover](advanced/5.reliability/6.failover.md)
+7. [Disaster Recovery](advanced/5.reliability/7.disaster_recovery.md)
+8. [Backup / Restore](advanced/5.reliability/8.backup_restore.md)
+9. [Recovery Point Objective (RPO)](advanced/5.reliability/9.recovery_point_objective.md)
+10. [Recovery Time Objective (RTO)](advanced/5.reliability/10.recovery_time_objective.md)
+11. [Multi-Region Architecture](advanced/5.reliability/11.multi_region_architecture.md)
 
 ## Advanced → Performance
 
-1. [Performance Engineering](advanced/performance/1.performance_engineering.md)
-2. [Profiling](advanced/performance/2.profiling.md)
-3. [Capacity Planning](advanced/performance/3.capacity_planning.md)
-4. [Bottleneck Analysis](advanced/performance/4.bottleneck_analysis.md)
-5. [Throughput Optimization](advanced/performance/5.throughput_optimization.md)
-6. [Latency Optimization](advanced/performance/6.latency_optimization.md)
-7. [Large-scale Caching](advanced/performance/7.large_scale_caching.md)
+1. [Performance Engineering](advanced/6.performance/1.performance_engineering.md)
+2. [Profiling](advanced/6.performance/2.profiling.md)
+3. [Capacity Planning](advanced/6.performance/3.capacity_planning.md)
+4. [Bottleneck Analysis](advanced/6.performance/4.bottleneck_analysis.md)
+5. [Throughput Optimization](advanced/6.performance/5.throughput_optimization.md)
+6. [Latency Optimization](advanced/6.performance/6.latency_optimization.md)
+7. [Large-scale Caching](advanced/6.performance/7.large_scale_caching.md)
 
 ## Advanced → Observability / Operations
 
-1. [Advanced Distributed Tracing](advanced/observability_operations/1.advanced_distributed_tracing.md)
-2. [Service Level Objectives (SLO)](advanced/observability_operations/2.service_level_objectives.md)
-3. [Service Level Agreements (SLA)](advanced/observability_operations/3.service_level_agreements.md)
-4. [Error Budget](advanced/observability_operations/4.error_budget.md)
-5. [Capacity Monitoring](advanced/observability_operations/5.capacity_monitoring.md)
-6. [Advanced Alerting](advanced/observability_operations/6.advanced_alerting.md)
-7. [Chaos Testing](advanced/observability_operations/7.chaos_testing.md)
+1. [Advanced Distributed Tracing](advanced/7.observability_operations/1.advanced_distributed_tracing.md)
+2. [Service Level Objectives (SLO)](advanced/7.observability_operations/2.service_level_objectives.md)
+3. [Service Level Agreements (SLA)](advanced/7.observability_operations/3.service_level_agreements.md)
+4. [Error Budget](advanced/7.observability_operations/4.error_budget.md)
+5. [Capacity Monitoring](advanced/7.observability_operations/5.capacity_monitoring.md)
+6. [Advanced Alerting](advanced/7.observability_operations/6.advanced_alerting.md)
+7. [Chaos Testing](advanced/7.observability_operations/7.chaos_testing.md)
 
 ## Advanced → Security
 
-1. [Security Architecture](advanced/security/1.security_architecture.md)
-2. [Threat Modeling](advanced/security/2.threat_modeling.md)
-3. [Secrets Management](advanced/security/3.secrets_management.md)
-4. [Encryption](advanced/security/4.encryption.md)
-5. [Key Management](advanced/security/5.key_management.md)
-6. [Advanced API Security](advanced/security/6.advanced_api_security.md)
-7. [Zero Trust Concepts](advanced/security/7.zero_trust_concepts.md)
-8. [Dependency / Supply-chain Security](advanced/security/8.dependency_supply_chain_security.md)
+1. [Security Architecture](advanced/8.security/1.security_architecture.md)
+2. [Threat Modeling](advanced/8.security/2.threat_modeling.md)
+3. [Secrets Management](advanced/8.security/3.secrets_management.md)
+4. [Encryption](advanced/8.security/4.encryption.md)
+5. [Key Management](advanced/8.security/5.key_management.md)
+6. [Advanced API Security](advanced/8.security/6.advanced_api_security.md)
+7. [Zero Trust Concepts](advanced/8.security/7.zero_trust_concepts.md)
+8. [Dependency / Supply-chain Security](advanced/8.security/8.dependency_supply_chain_security.md)
 
 ## Advanced → DevOps / Delivery
 
-1. [Infrastructure as Code](advanced/devops_delivery/1.infrastructure_as_code.md)
-2. [Blue-Green Deployment](advanced/devops_delivery/2.blue_green_deployment.md)
-3. [Canary Deployment](advanced/devops_delivery/3.canary_deployment.md)
-4. [Progressive Delivery](advanced/devops_delivery/4.progressive_delivery.md)
-5. [Advanced Feature Flags](advanced/devops_delivery/5.advanced_feature_flags.md)
-6. [Kubernetes](advanced/devops_delivery/6.kubernetes.md)
-7. [Multi-environment Deployment](advanced/devops_delivery/7.multi_environment_deployment.md)
+1. [Infrastructure as Code](advanced/9.devops_delivery/1.infrastructure_as_code.md)
+2. [Blue-Green Deployment](advanced/9.devops_delivery/2.blue_green_deployment.md)
+3. [Canary Deployment](advanced/9.devops_delivery/3.canary_deployment.md)
+4. [Progressive Delivery](advanced/9.devops_delivery/4.progressive_delivery.md)
+5. [Advanced Feature Flags](advanced/9.devops_delivery/5.advanced_feature_flags.md)
+6. [Kubernetes](advanced/9.devops_delivery/6.kubernetes.md)
+7. [Multi-environment Deployment](advanced/9.devops_delivery/7.multi_environment_deployment.md)
 
 ## Testing & Acceptance → Automated Testing
 
