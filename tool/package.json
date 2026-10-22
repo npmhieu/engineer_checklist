@@ -1,0 +1,11 @@
+{
+  "name": "engineer-checklist-tools",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "marked": "18.1.1"
+  }
+}
