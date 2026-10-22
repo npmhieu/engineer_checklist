@@ -12,8 +12,8 @@ dist/
 build/
 
 # HTML generated from lesson Markdown
-codex/**/*.html
-gemini/**/*.html
+# codex/**/*.html
+# gemini/**/*.html
 
 # Local environment files; keep reusable examples
 .env

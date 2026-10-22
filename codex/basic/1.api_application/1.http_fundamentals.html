@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>1.http_fundamentals</title>
+        <style>
+            body {
+                max-width: 960px;
+                margin: 40px auto;
+                padding: 0 20px;
+                color: #24292f;
+                font:
+                    16px/1.6 system-ui,
+                    sans-serif;
+                overflow-wrap: break-word;
+            }
+            h1,
+            h2,
+            h3 {
+                line-height: 1.25;
+                margin-top: 1.5em;
+            }
+            a {
+                color: #0969da;
+            }
+            pre,
+            code {
+                background: #f6f8fa;
+                border-radius: 6px;
+            }
+            code {
+                padding: 0.15em 0.3em;
+                font-size: 0.9em;
+            }
+            pre {
+                padding: 16px;
+                overflow-x: auto;
+            }
+            pre code {
+                padding: 0;
+            }
+            table {
+                display: block;
+                max-width: 100%;
+                overflow-x: auto;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                border: 1px solid #d0d7de;
+                padding: 8px 12px;
+                text-align: left;
+            }
+            th {
+                background: #f6f8fa;
+            }
+            blockquote {
+                margin-left: 0;
+                padding-left: 16px;
+                border-left: 4px solid #d0d7de;
+                color: #57606a;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>HTTP Fundamentals</h1>
+            <p>
+                <a href="../../README.md">Lesson index</a> · Next:
+                <a href="2.api_request_response.md">API / Request-Response</a>
+            </p>
+            <h2>1. What is it?</h2>
+            <p>
+                HTTP (Hypertext Transfer Protocol) defines how clients and
+                servers exchange messages. A client can be a browser, mobile
+                app, command-line tool, or another backend. A server receives
+                requests and sends responses.
+            </p>
+            <p>
+                An HTTP request contains a <strong>method</strong>, a
+                <strong>target URL</strong>, <strong>headers</strong>, and
+                sometimes a <strong>body</strong>. A response contains a
+                <strong>status code</strong>, <strong>headers</strong>, and
+                sometimes a <strong>body</strong>. These concepts are defined in
+                <a href="https://www.rfc-editor.org/rfc/rfc9110.html"
+                    >HTTP Semantics, RFC 9110</a
+                >.
+            </p>
+            <p>
+                Think of a task app: the client asks for task 42; the backend
+                returns its current details.
+            </p>
+            <pre><code class="language-http">GET /tasks/42 HTTP/1.1
+Host: api.example.com
+Accept: application/json
+</code></pre>
+            <pre><code class="language-http">HTTP/1.1 200 OK
+Content-Type: application/json
+Cache-Control: no-store
+
+{&quot;id&quot;:42,&quot;title&quot;:&quot;Review HTTP&quot;,&quot;completed&quot;:false}
+</code></pre>
+            <p>
+                These examples show readable HTTP/1.1 message syntax. HTTP/2 and
+                HTTP/3 encode messages differently while retaining the core
+                meaning of methods, headers, and status codes.
+            </p>
+            <h3>Parts you should recognize</h3>
+            <p>
+                For <code>https://api.example.com/tasks/42?include=owner</code>:
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Part</th>
+                        <th>Example</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Scheme</td>
+                        <td><code>https</code></td>
+                        <td>HTTP communication protected by TLS</td>
+                    </tr>
+                    <tr>
+                        <td>Host</td>
+                        <td><code>api.example.com</code></td>
+                        <td>Identifies the server</td>
+                    </tr>
+                    <tr>
+                        <td>Path</td>
+                        <td><code>/tasks/42</code></td>
+                        <td>Identifies the target resource</td>
+                    </tr>
+                    <tr>
+                        <td>Query</td>
+                        <td><code>include=owner</code></td>
+                        <td>Supplies additional request options</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <code>Content-Type</code> describes the body being sent.
+                <code>Accept</code> describes response formats the client can
+                handle. JSON is a common body format, but HTTP can also carry
+                HTML, images, files, and other formats.
+            </p>
+            <p>
+                HTTP is stateless: application context must be supplied with
+                each request as needed. This does <strong>not</strong> mean a
+                backend cannot store data, users, or sessions. A client can send
+                a session cookie or token so the backend can identify it.
+            </p>
+            <h2>2. Why do we need it?</h2>
+            <p>
+                HTTP gives independently built clients and servers a shared
+                communication language. A mobile app written in Kotlin can call
+                a backend written in Go because both understand the same
+                protocol.
+            </p>
+            <p>For a backend developer, knowing HTTP helps you:</p>
+            <ul>
+                <li>
+                    Choose methods and response codes that clients understand.
+                </li>
+                <li>
+                    Debug whether a failure comes from connectivity,
+                    authentication, input, or server code.
+                </li>
+                <li>
+                    Inspect requests using browser developer tools or
+                    <code>curl</code>.
+                </li>
+                <li>
+                    Use infrastructure such as gateways, reverse proxies, and
+                    caches correctly.
+                </li>
+            </ul>
+            <p>
+                For example, a client receiving <code>404</code> should
+                investigate the URL or missing resource. A
+                <code>500</code> points toward an unexpected server failure.
+                Returning <code>200</code> for every outcome hides that
+                distinction.
+            </p>
+            <h2>3. How do we apply / implement / use it?</h2>
+            <h3>Choose the method and outcome</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Typical task-app use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>GET</code></td>
+                        <td>Read tasks</td>
+                    </tr>
+                    <tr>
+                        <td><code>POST</code></td>
+                        <td>Create a task</td>
+                    </tr>
+                    <tr>
+                        <td><code>PUT</code></td>
+                        <td>Replace a task&#39;s writable representation</td>
+                    </tr>
+                    <tr>
+                        <td><code>PATCH</code></td>
+                        <td>Change selected task fields</td>
+                    </tr>
+                    <tr>
+                        <td><code>DELETE</code></td>
+                        <td>Remove a task</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                GET must not request a business mutation such as deleting a
+                task. PUT and DELETE are idempotent: repeating the same request
+                has the same intended effect as sending it once. Responses can
+                still differ, such as <code>204</code> on the first deletion and
+                <code>404</code> on the next. POST and PATCH are not inherently
+                idempotent. See
+                <a
+                    href="https://www.rfc-editor.org/rfc/rfc9110.html#section-9.2"
+                    >RFC 9110 method properties</a
+                >.
+            </p>
+            <p>Common response choices:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Meaning in this example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>200 OK</code></td>
+                        <td>Read or update succeeded, with response content</td>
+                    </tr>
+                    <tr>
+                        <td><code>201 Created</code></td>
+                        <td>New task created</td>
+                    </tr>
+                    <tr>
+                        <td><code>204 No Content</code></td>
+                        <td>Operation succeeded; no response body</td>
+                    </tr>
+                    <tr>
+                        <td><code>400 Bad Request</code></td>
+                        <td>Malformed request, such as invalid JSON</td>
+                    </tr>
+                    <tr>
+                        <td><code>401 Unauthorized</code></td>
+                        <td>Valid authentication credentials are missing</td>
+                    </tr>
+                    <tr>
+                        <td><code>403 Forbidden</code></td>
+                        <td>Server refuses access</td>
+                    </tr>
+                    <tr>
+                        <td><code>404 Not Found</code></td>
+                        <td>Task or route was not found</td>
+                    </tr>
+                    <tr>
+                        <td><code>500 Internal Server Error</code></td>
+                        <td>Unexpected server failure</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Inspect real messages</h3>
+            <p>
+                The following commands assume you have implemented a local task
+                API listening on port 3000. These lessons do not install or
+                start a server.
+            </p>
+            <pre><code class="language-sh"># Show response headers and body.
+curl -i http://localhost:3000/tasks/42
+
+# Send a JSON body to create a task.
+curl -i http://localhost:3000/tasks \
+  -H &#39;Content-Type: application/json&#39; \
+  -H &#39;Accept: application/json&#39; \
+  --data &#39;{&quot;title&quot;:&quot;Review HTTP&quot;}&#39;
+</code></pre>
+            <p>
+                <code>--data</code> makes the second request use POST. Use HTTPS
+                when communicating with a deployed API. Avoid putting passwords
+                or tokens in URLs, which commonly appear in logs.
+            </p>
+            <h3>Implement the backend boundary</h3>
+            <p>
+                Your web framework normally handles network connections and
+                message parsing. Your handler still needs to select the route,
+                interpret input, invoke business logic, and send an appropriate
+                status, headers, and body. Do not manually construct HTTP wire
+                messages in ordinary application code.
+            </p>
+            <h3>Review practice</h3>
+            <ol>
+                <li>
+                    Identify the method, path, headers, and body in the POST
+                    command.
+                </li>
+                <li>
+                    Explain how <code>Content-Type</code> differs from
+                    <code>Accept</code>.
+                </li>
+                <li>
+                    Explain why a successful DELETE might return
+                    <code>204</code> without JSON.
+                </li>
+                <li>
+                    Explain why a timeout does not prove that a write failed:
+                    the server may have committed it before the response was
+                    lost.
+                </li>
+            </ol>
+            <p>
+                You understand this item when you can inspect a request and
+                response and explain what each part means.
+            </p>
+        </main>
+    </body>
+</html>
